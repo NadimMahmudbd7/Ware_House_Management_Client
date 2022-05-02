@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import './AddItem.css'
 import auth from '../../firebase.init';
+import { toast } from 'react-toastify';
 
 const AddItem = () => {
     const { register, handleSubmit } = useForm();
@@ -17,7 +18,9 @@ const AddItem = () => {
             body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(result => console.log(result))
+            .then(result => {
+                toast(result.success)
+            })
     }
     return (
         <div>
