@@ -10,16 +10,15 @@ import google from '../Images/google.png'
 
 const Login = () => {
     const [activeUser] = useAuthState(auth)
-    console.log(activeUser);
     const [showpass, setpass] = useState(false)
-    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         HookError,
     ] = useSignInWithEmailAndPassword(auth);
-    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, googleUser] = useSignInWithGoogle(auth);
     let navigate = useNavigate();
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
@@ -70,9 +69,22 @@ const Login = () => {
         <p>Loading</p>
     }
     if (user || googleUser) {
-        navigate(from)
+        fetch('http://localhost:4000/login', {
+            method: 'POST',
+            body: JSON.stringify({
+                email:activeUser.email  
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                localStorage.setItem("AccessToken", data.token)
+            });
+            navigate(from)
     }
-    console.log(HookError);
+
     useEffect(() => {
         if (HookError) {
             switch (HookError?.code) {
