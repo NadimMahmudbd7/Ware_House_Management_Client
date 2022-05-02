@@ -19,7 +19,13 @@ const AddItem = () => {
         })
             .then(res => res.json())
             .then(result => {
-                toast(result.success)
+                
+                if(result.value===true){
+                    toast.success(result.success)
+                }
+                else{
+                    toast.error(result.success)
+                }
             })
     }
     return (

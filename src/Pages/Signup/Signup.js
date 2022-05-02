@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useAuthState, useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useUpdateProfile } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
 import google from "../Images/google.png"
@@ -26,6 +26,7 @@ const Signup = () => {
         HookError,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    const [activeUser] = useAuthState(auth)
 
     const forEmail = (event) => {
         const invalidEmail = event.target.value;
@@ -63,7 +64,20 @@ const Signup = () => {
         }
     }
 
-    if(user || googleUser){
+    if (user || googleUser) {
+        fetch('http://localhost:4000/login', {
+            method: 'POST',
+            body: JSON.stringify({
+                email:activeUser.email  
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                localStorage.setItem("AccessToken", data.token)
+            });
         navigate("/")
     }
 
@@ -74,30 +88,32 @@ const Signup = () => {
             toast("Something went wrong")
             return
         }
-        
+
         else {
             const email = event.target.email.value
             const password = event.target.password.value
             const confirmPass = event.target.confirmPassword.value
-            
 
-            fetch('http://localhost:4000/signup',{
-            method:"POST",
-            headers:{
-                "content-type" : "application/json"
-            },
-            body:JSON.stringify({email})
-        })
-        .then(res=>res.json())
-        .then(result=> {
-            console.log(result);
-        })
+
+            fetch('http://localhost:4000/login', {
+                method: 'POST',
+                body: JSON.stringify({
+                    email: email
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    localStorage.setItem("AccessToken", data.token)
+                });
             await createUserWithEmailAndPassword(email, password)
             toast('Account Successfully Created');
             await updateProfile({ displayName: userInfo.name });
             console.log(email, password, confirmPass);
             navigate("/")
-            
+
         }
     }
 
@@ -128,12 +144,12 @@ const Signup = () => {
 
             <button onClick={() => signInWithGoogle()}>
                 <div className="googleSection">
-                <div className="image">
-                    <img className='google' src={google} alt="" />
-                </div>
-                <div className="title">
-                    Google
-                </div>
+                    <div className="image">
+                        <img className='google' src={google} alt="" />
+                    </div>
+                    <div className="title">
+                        Google
+                    </div>
                 </div>
             </button>
         </div>
