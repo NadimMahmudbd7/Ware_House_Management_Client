@@ -7,7 +7,7 @@ import auth from '../../firebase.init';
 import CustomLink from '../CustomeLink/CustomLink';
 
 const Header = () => {
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
 
     const logout = () => {
         signOut(auth);
@@ -32,7 +32,7 @@ const Header = () => {
                                 <CustomLink className="nav-link active" to={'/additem'}>Add Item</CustomLink>
                             </li>
                             <li className="nav-item">
-                                <CustomLink className="nav-link active" to={"/myitem"}>My Items</CustomLink>
+                                <CustomLink className="nav-link active" to={"/myitems"}>My Items</CustomLink>
                             </li>
                             <li className="nav-item">
                                 { user ? <CustomLink className="nav-link active" onClick={logout} to={"/login"}>Sign Out</CustomLink> :<CustomLink className="nav-link active" to={"/login"}>Login</CustomLink>}

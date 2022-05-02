@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useUpdateProfile } from 'react-firebase-hooks/auth';
-import { toast, ToastContainer } from 'react-toastify';
-import google from "../images/google.png"
+import { toast } from 'react-toastify';
+import google from "../Images/google.png"
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
-import Helmeted from '../../Helmet/Helmet';
+
 
 
 
 const Signup = () => {
     const navigate = useNavigate()
     const [showpass, setpass] = useState(false)
-    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, googleUser] = useSignInWithGoogle(auth);
     const [userInfo, setUserInfo] = useState({ email: '', password: '', confirmpass: '' })
     const [error, setError] = useState({ email: '', password: '' })
     let location = useLocation();
@@ -80,6 +80,18 @@ const Signup = () => {
             const password = event.target.password.value
             const confirmPass = event.target.confirmPassword.value
             
+
+            fetch('http://localhost:4000/signup',{
+            method:"POST",
+            headers:{
+                "content-type" : "application/json"
+            },
+            body:JSON.stringify({email})
+        })
+        .then(res=>res.json())
+        .then(result=> {
+            console.log(result);
+        })
             await createUserWithEmailAndPassword(email, password)
             toast('Account Successfully Created');
             await updateProfile({ displayName: userInfo.name });
@@ -92,7 +104,6 @@ const Signup = () => {
 
     return (
         <div className="login-container animate__animated wow animate__zoomIn">
-            <Helmeted title={"SignUp"}></Helmeted>
             <div className="login-title">SIGNUP</div>
             <form onSubmit={handleEmail} className="login-form">
                 <input type="email" name='email' placeholder="Your Email" onChange={forEmail} />
@@ -125,7 +136,6 @@ const Signup = () => {
                 </div>
                 </div>
             </button>
-            <ToastContainer></ToastContainer>
         </div>
     );
 };
