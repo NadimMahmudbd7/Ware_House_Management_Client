@@ -27,6 +27,8 @@ const UpdateProduct = () => {
             .then(data => setOneproduct(data.result))
         event.target.reset()
     }
+
+    
     const handleAddProducts = (event) => {
 
         event.preventDefault()
@@ -35,7 +37,7 @@ const UpdateProduct = () => {
             qty: Oneproduct?.product?.qty,
             deliverQty: quentity,
         }
-        const url = `http://localhost:4000/updateproduct/${productId}`
+        const url = `http://localhost:4000/updateproducts/${productId}`
         fetch(url, {
             method: "PUT",
             headers: {
@@ -44,7 +46,7 @@ const UpdateProduct = () => {
             body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(data => setOneproduct(data.addForProducts))
+            .then(data => setOneproduct(data.result))
         event.target.reset()
     }
 
