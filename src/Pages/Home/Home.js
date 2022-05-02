@@ -43,7 +43,7 @@ const Home = () => {
 
             <section>
                 <h1 className='text-center'>Inventory <span className='fw-bold'>Itmes:{products?.length}</span></h1>
-                <div className="row row-cols-1 row-cols-md-3 g-4">
+                <div className="row row-cols-1 row-cols-md-3 g-4 w-100">
                 {
                     products?.map(product => <Product product={product} key={product._id} ></Product>)
                 }
