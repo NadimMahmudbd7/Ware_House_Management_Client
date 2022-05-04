@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ScrollToTop from "react-scroll-to-top";
 import banner1 from "../Images/banner1.jpg"
 import banner2 from "../Images/banner2.jpg"
 import Product from '../Product/Product';
@@ -15,6 +16,7 @@ const Home = () => {
 
     return (
         <>
+        <ScrollToTop smooth />
             {/* ------------------------------------------------Carosel Section start------------------------------- */}
 
             <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
@@ -41,8 +43,9 @@ const Home = () => {
             </div>
             {/* ------------------------------------------------Carosel Section End------------------------------- */}
 
+            
             <section>
-                <h1 className='text-center'>Inventory <span className='fw-bold'>Itmes:{products?.length}</span></h1>
+                <h1 className='text-center product'>Inventory <span className='fw-bold'>Itmes:{products?.length}</span></h1>
                 <div className="row row-cols-1 row-cols-md-3 g-4 w-100">
                 {
                     products?.map(product => <Product product={product} key={product._id} ></Product>)

@@ -83,3 +83,87 @@
 .error-message::before{
     content: "❌ ";
 }
+.card{
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(20px);
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+ion-icon.md.hydrated{
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 10px;
+    color: #464040;
+    margin-left: 14px;
+
+}
+ion-icon.md.hydrated:hover{
+    color: white;
+    background-color: #1da1f2;
+    cursor: pointer;
+}
+.news, .aboutus, .terms{
+    font-size: 15px;
+    margin-left: 40px;
+    display: inline-block;
+    margin-top: 17px;
+    line-height: 0px;
+}
+.rightSide{
+    position: relative
+}
+.news::before{
+    content: "";
+    width: 28px;
+    position: absolute;
+    background-color: #8a8a8f;
+    height: 1px;
+    top: 62px;
+    left: 0;
+}
+.aboutus::before{
+    content: "";
+    width: 28px;
+    position: absolute;
+    background-color: #8a8a8f;
+    height: 1px;
+    top: 98px;
+    left: 0;
+}
+.terms::before{
+    content: "";
+    width: 28px;
+    position: absolute;
+    background-color: #8a8a8f;
+    height: 1px;
+    top: 136px;
+    left: 0;
+}
+.rightSide::before{
+    content: "";
+    width: 1px;
+    position: absolute;
+    background-color: #8a8a8f;
+    height: 96px;
+    margin-top: 53px;
+}
+.totalFooter{
+    background: #8080801a;
+    margin-top: 70px;
+    box-sizing: border-box;
+    padding-top: 45px;
+    padding-bottom: 10px;
+}
+.copyRight{
+    display: flex;
+    justify-content: center;
+}
+.news:hover,.aboutus:hover,.terms:hover {
+    transition: all 0.5s;
+    cursor: pointer;
+    color: orange;
+}

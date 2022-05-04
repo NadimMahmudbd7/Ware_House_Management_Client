@@ -11,6 +11,7 @@ import AddItems from './Pages/AddItem/AddItems';
 import MyItems from './Pages/MyItems/MyItems';
 import Signup from './Pages/Signup/Signup';
 import Requireauth from './Pages/RequirAuth/Requireauth';
+import Footer from './Pages/Footer/Footer';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
       </Routes>
+      <Footer></Footer>
       <ToastContainer></ToastContainer>
     </div>
   );
