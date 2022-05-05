@@ -104,8 +104,9 @@ const Login = () => {
     }, [HookError])
 
     return (
-        <div className="login-container animate__animated wow animate__zoomIn">
-            <div className="login-title">LOGIN</div>
+        <div className='addForm'>
+            <div className="login-container animate__animated wow animate__zoomIn">
+            <div className="login-title text-white">LOGIN</div>
             <form onSubmit={handleEmail} className="login-form">
                 <input type="email" name='email' placeholder="Your Email" onChange={forEmail} />
                 {error.email && <p className='error-message'>{error.email}</p>}
@@ -116,13 +117,13 @@ const Login = () => {
                     </svg></p>
                 </div>
                 {error.password && <p className='error-message'>{error.password}</p>}
-                <a className='forgotPass' onClick={forResetPassword} >Forgot Password</a>
+                <a className='forgotPass text-white' onClick={forResetPassword} >Forgot Password</a>
                 <button>Login</button>
-                <p>Don't have an account? <Link to="/signup">Sign up first</Link> </p>
+                <p className='text-white'>Don't have an account? <Link className='text-white' to="/signup">Sign up first</Link> </p>
             </form>
             <div className="or">
                 <div className="right"></div>
-                <div className="middle">or</div>
+                <div className="middle text-white">or</div>
                 <div className="left"></div>
             </div>
             <button onClick={() => signInWithGoogle()}>
@@ -135,6 +136,7 @@ const Login = () => {
                     </div>
                 </div>
             </button>
+        </div>
         </div>
     );
 };

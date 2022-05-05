@@ -6,17 +6,28 @@
     border-radius: 20px;
     padding: 40px;
     box-sizing: border-box;
-    background: #ecf0f3;
-    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+    background: #ecf0f369;
+    /* box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white; */
+    backdrop-filter: blur(10px);
 }
 
+.textArea{
+    background: #ecf0f3;
+    margin: 15px 0 0 0;
+    padding: 10px;
+    padding-left: 20px;
+    outline: none;
+    font-size: 14px;
+    border-radius: 50px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
 
 .login-title {
     text-align: center;
     margin-top: 10px;
     font-weight: 900;
     font-size: 1.8rem;
-    color: #1da1f2;
+    color: white;
     letter-spacing: 1px;
 }
 
@@ -66,8 +77,6 @@
     border-radius: 20px;
     cursor: pointer;
     font-weight: 900;
-    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
-    transition: 0.5s;
 }
 
 .login-container button:hover {
@@ -84,8 +93,9 @@
     content: "❌ ";
 }
 .card{
-    background-color: rgba(255,255,255,0.3);
+    background-color: #80808014;
     backdrop-filter: blur(20px);
+
 }
 
 .footer{
@@ -237,7 +247,7 @@ ion-icon.md.hydrated:hover{
   margin-top: 70px;
   padding-top: 70px;
   padding-bottom: 70px;
-  background-color: gray;
+  background-color: white;
 }
 .brandimg{
     width: 150px;
@@ -254,7 +264,7 @@ ion-icon.md.hydrated:hover{
     position: relative;
     width: 350px;
     height: 10px;
-    background-color: gray;
+    background-color: white;
     border-radius: 10px;
 }
 .CusProgress{
@@ -354,12 +364,15 @@ ion-icon.md.hydrated:hover{
     background: orange;
     border-radius: 100%;
     z-index: 2;
+    margin-top: 20px;
 }
 .playbtn::before{
     content: "";
     position: absolute;
     border: 15px solid #fff;
     border-radius: 50%;
+    width: 50px;
+    height: 50px;
     top: -20;
     left: -20;
     right: -20;
@@ -373,6 +386,8 @@ ion-icon.md.hydrated:hover{
     position: absolute;
     border: 15px solid #fff;
     border-radius: 50%;
+    width: 100px;
+    height: 100px;
     top: -20;
     left: -20;
     right: -20;
@@ -407,7 +422,64 @@ ion-icon.md.hydrated:hover{
 .watchText{
     color: white;
 }
-ion-icon.md.hydrated{
-    color: white;
-    margin-left: 0px;
+
+hr{
+    width: 530px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 30%;
+}
+.hr1{
+    width: 470px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 32%;
+    margin-bottom: 57px;
+    margin-top: 7px;
+}
+.updatecard{
+    width: 30%;
+}
+.inventoryBtn{
+    height: 200px;
+    padding: 30px;
+    background-image: linear-gradient(45deg, #857e7e, transparent);
+    margin-top: 70px;
+    border-radius: 10px;
+}
+.deliverBtn,.addBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.updateInventory{
+    display: flex;
+    justify-content: space-evenly;
+}
+.textInput{
+    outline: none;
+    border: none;
+    height: 36px;
+    width: 236px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #ededed;
+}
+.updateInventoryImage{
+    width: 50%;
+}
+.updateInventor{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.addForm{
+    background-image: linear-gradient(45deg, #3e32a8,#e310c7);
+    padding-top: 1px;
+    padding-bottom: 90px;
 }

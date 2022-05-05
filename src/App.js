@@ -12,6 +12,7 @@ import MyItems from './Pages/MyItems/MyItems';
 import Signup from './Pages/Signup/Signup';
 import Requireauth from './Pages/RequirAuth/Requireauth';
 import Footer from './Pages/Footer/Footer';
+import NotFound from './pages/NotFound/NotFound'
 import { Parallax } from 'react-parallax';
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
       </Routes>
+      <Route path="*" element={<NotFound></NotFound>}></Route>
       <Footer></Footer>
       <ToastContainer></ToastContainer>
     </div>

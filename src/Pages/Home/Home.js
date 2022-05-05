@@ -53,7 +53,9 @@ const Home = () => {
 
 
             <section>
-                <h1 className='text-center product'>Inventory <span className='fw-bold'>Itmes:{products?.length}</span></h1>
+                <h1 className='text-center product my-4'>Inventory <span className='fw-bold'>Products:{products?.length}</span></h1>
+                <hr />
+                <hr className='hr1'/>
                 <div className="row row-cols-1 row-cols-md-3 g-4 w-100">
                     {
                         products?.map(product => <Product product={product} key={product._id} ></Product>)
@@ -105,43 +107,47 @@ const Home = () => {
             <Parallax className='paralex' strength={200} bgImage={banner4} style={{ height: "500px" }}>
 
 
-            <div className="progressBar container">
-                <div className="progressLeftSide">
-                    <h1 className='watchText'>WATCH OUR COMPANY PRESENTATION</h1>
-                    <div className="playbtn">
-                    <ion-icon name="play-outline"></ion-icon>
+                <div className="progressBar container">
+                    <div className="progressLeftSide">
+                        <h1 className='watchText'>WATCH OUR COMPANY PRESENTATION</h1>
+                        <small className='text-white'>Watch Video</small>
+                        <a target={"_blank"} href='https://preview.themeforest.net/item/lightwire-construction-industry-modx-theme/full_screen_preview/34548859?_ga=2.219112156.476454025.1651663520-1945677544.1651504589'>
+                            <div className="playbtn">
+                                <ion-icon style={{color:"white" ,margin:"0px"}} name="play-outline"></ion-icon>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div className="progressRightSide">
+                        <div className="cusSaticfaction">
+                            <h5 className='CusText'>SATICFACTION</h5>
+                            <div className="progress1">
+                                <div className="CusProgress"></div>
+
+                            </div>
+                        </div>
+                        <div className="roffing">
+                            <h5 className='CusText'>ROOFING</h5>
+                            <div className="progress1">
+                                <div className="roffProgress"></div>
+
+                            </div>
+                        </div>
+                        <div className="Secure">
+                            <h5 className='CusText'>SECURE</h5>
+                            <div className="progress1">
+                                <div className="secureProgress"></div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className="progressRightSide">
-                    <div className="cusSaticfaction">
-                        <h5 className='CusText'>SATICFACTION</h5>
-                        <div className="progress1">
-                            <div className="CusProgress"></div>
-
-                        </div>
-                    </div>
-                    <div className="roffing">
-                        <h5 className='CusText'>ROOFING</h5>
-                        <div className="progress1">
-                            <div className="roffProgress"></div>
-
-                        </div>
-                    </div>
-                    <div className="Secure">
-                        <h5 className='CusText'>SECURE</h5>
-                        <div className="progress1">
-                            <div className="secureProgress"></div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
 
 
 
             </Parallax>
 
-            
+
         </>
     );
 };

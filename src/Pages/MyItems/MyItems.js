@@ -14,7 +14,7 @@ const MyItems = () => {
     }, [user])
     return (
         <div>
-            <h1>this is my items:{items.length}</h1>
+            <h1 className='text-center mt-2 mb-4'>Your Added Items:{items.length}</h1>
             <div className="row row-cols-1 row-cols-md-3 g-4">
             {
                 items.map(item => <PerUserItems item={item} key={item._id}></PerUserItems>)

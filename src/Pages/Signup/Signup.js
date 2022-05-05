@@ -119,7 +119,8 @@ const Signup = () => {
 
 
     return (
-        <div className="login-container animate__animated wow animate__zoomIn">
+        <div className='addForm'>
+            <div className="login-container animate__animated wow animate__zoomIn">
             <div className="login-title">SIGNUP</div>
             <form onSubmit={handleEmail} className="login-form">
                 <input type="email" name='email' placeholder="Your Email" onChange={forEmail} />
@@ -133,16 +134,16 @@ const Signup = () => {
                 {error.password && <p className='error-message'>{error.password}</p>}
                 <input type={showpass ? "text" : "password"} name='confirmPassword' placeholder="confirmPassword" onChange={forConfirmPassword} />
                 {error.confirmpass && <p className='error-message'>{error.confirmpass}</p>}
-                <button>SignUp</button>
-                <p>Already Have Account? <Link to="/login">Login</Link> </p>
+                <button className='updatebtn'>SignUp</button>
+                <p className='text-white'>Already Have Account? <Link className='text-white' to="/login">Login</Link> </p>
             </form>
             <div className="or">
                 <div className="right"></div>
-                <div className="middle">or</div>
+                <div className="middle text-white">or</div>
                 <div className="left"></div>
             </div>
 
-            <button onClick={() => signInWithGoogle()}>
+            <button className='updatebtn' onClick={() => signInWithGoogle()}>
                 <div className="googleSection">
                     <div className="image">
                         <img className='google' src={google} alt="" />
@@ -152,6 +153,7 @@ const Signup = () => {
                     </div>
                 </div>
             </button>
+        </div>
         </div>
     );
 };

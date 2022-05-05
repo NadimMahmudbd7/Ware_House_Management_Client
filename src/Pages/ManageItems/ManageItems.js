@@ -14,7 +14,7 @@ const ManageItems = () => {
 
     const deleteDetails = (id) => {
         console.log(id);
-        const proced = window.confirm("you agree ?")
+        const proced = window.confirm("Are You Agree For Delete ?")
         if (proced){
             const url = `http://localhost:4000/products/${id}`
             console.log(url);
@@ -31,7 +31,7 @@ const ManageItems = () => {
     }
     return (
         <div >
-            <h1>this is manage items:{products.length}</h1>
+            <h1 className='text-center my-3'>Inventory Total Products:{products.length}</h1>
             <table className='table table-striped table-dark'>
                 <thead>
                 <tr>
@@ -56,7 +56,7 @@ const ManageItems = () => {
                                     <td>{product.suppliername}</td>
                                     <td><img className='w-25' src={product.img} alt="" /></td>
                                     <td >
-                                       < button onClick={()=>deleteDetails(product._id)} >Delete</button>
+                                       < button className='updatebtn' onClick={()=>deleteDetails(product._id)} >Delete</button>
                                     </td>
                                     
                                 </tr>

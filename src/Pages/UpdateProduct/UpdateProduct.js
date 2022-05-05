@@ -28,7 +28,7 @@ const UpdateProduct = () => {
         event.target.reset()
     }
 
-    
+
     const handleAddProducts = (event) => {
 
         event.preventDefault()
@@ -52,9 +52,12 @@ const UpdateProduct = () => {
 
     return (
         <div>
-            <h1>this is update produtct page:{Oneproduct?.product?.name}</h1>
-            <div className="card h-100">
-                <img src={Oneproduct?.product?.img} alt="" className="card-img-top" />
+            <h1 className='text-center mb-5 mt-2'>Manage Your Stock Product : {Oneproduct?.product?.name}</h1>
+            <div className="updateInventory">
+            <div className="card updatecard h-100">
+                <div className='updateInventor'>
+                <img src={Oneproduct?.product?.img} alt="" className="card-img-top updateInventoryImage" />
+                </div>
                 <div className="card-body">
                     <h5 className="card-title">{Oneproduct?.product?.name}</h5>
                     <p className="card-text">{Oneproduct?.product?.description}</p>
@@ -62,26 +65,29 @@ const UpdateProduct = () => {
                     <p className="card-text">Quentity: {Oneproduct?.product?.qty}</p>
                     <p className="card-text"><small>Supplier-Name: {Oneproduct?.product?.suppliername}</small></p>
 
-                    <div className="card" style={{ width: "100%" }}></div>
-                    <div>
-                        <form action="" onSubmit={handleDeliverQuentity}>
-                            <input type="text" name="qty" id="qty" placeholder='your quentity' />
-                            <div className="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
-                                <input type="submit" value="Product Deliver" />
-                            </div>
-                        </form>
-                        <form action="" onSubmit={handleAddProducts}>
-                            <input type="text" name="qty" id="qty" placeholder='your quentity' />
-                            <div className="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
-                                <input type="submit" value="Product Add" />
-                            </div>
-                        </form>
-                        
-                    </div>
-
-
-
                 </div>
+            </div>
+            <div className='inventoryBtn'>
+                <form action="" onSubmit={handleDeliverQuentity}>
+                    <div className="deliverBtn">
+                        <input className='textInput' type="text" name="qty" id="qty" placeholder='Deliver Qty' />
+                        <div>
+                            <input className='btn btn-primary' type="submit" value="Product Deliver" />
+                        </div>
+                    </div>
+                </form>
+                <div className="addBtn">
+                    <form action="" onSubmit={handleAddProducts}>
+                        <div className="addBtn">
+                            <input className='textInput' type="text" name="qty" id="qty" placeholder='Add Qty' />
+                            <div>
+                                <input className='btn btn-primary' type="submit" value="Product Add" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
             </div>
         </div>
     );

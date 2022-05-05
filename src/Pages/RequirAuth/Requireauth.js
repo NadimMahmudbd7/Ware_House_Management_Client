@@ -15,7 +15,7 @@ const Requireauth = ({ children }) => {
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
   if(!user?.emailVerified){
-    return <div>Please at first mail verify</div>
+    return <div className='text-center fw-bold' style={{fontSize:"40px", marginTop:"20px"}}>Please Verify Your Mail</div>
 }
     return children
 };
