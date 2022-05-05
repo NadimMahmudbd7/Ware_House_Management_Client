@@ -4,6 +4,7 @@ import ScrollToTop from "react-scroll-to-top";
 import banner1 from "../Images/banner1.jpg";
 import banner2 from "../Images/banner2.jpg";
 import banner3 from "../Images/banner3.jpg";
+import banner4 from "../Images/banner4.jpg";
 import logo1 from "../Images/logo-1.png";
 import logo2 from "../Images/logo-2.png";
 import logo3 from "../Images/logo-3.png";
@@ -100,6 +101,47 @@ const Home = () => {
                     <img className='brandimg' src={logo5} alt="" />
                 </div>
             </div>
+
+            <Parallax className='paralex' strength={200} bgImage={banner4} style={{ height: "500px" }}>
+
+
+            <div className="progressBar container">
+                <div className="progressLeftSide">
+                    <h1 className='watchText'>WATCH OUR COMPANY PRESENTATION</h1>
+                    <div className="playbtn">
+                    <ion-icon name="play-outline"></ion-icon>
+                    </div>
+                </div>
+                <div className="progressRightSide">
+                    <div className="cusSaticfaction">
+                        <h5 className='CusText'>SATICFACTION</h5>
+                        <div className="progress1">
+                            <div className="CusProgress"></div>
+
+                        </div>
+                    </div>
+                    <div className="roffing">
+                        <h5 className='CusText'>ROOFING</h5>
+                        <div className="progress1">
+                            <div className="roffProgress"></div>
+
+                        </div>
+                    </div>
+                    <div className="Secure">
+                        <h5 className='CusText'>SECURE</h5>
+                        <div className="progress1">
+                            <div className="secureProgress"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            </Parallax>
+
+            
         </>
     );
 };
