@@ -21,7 +21,7 @@ const Product = ({ product }) => {
                         <div className="card" style={{ width: "100%" }}></div>
                         <div className="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
                             <Link to={`/updateproduct/${product._id}`}>
-                            <button className="btn btn-primary me-md-2" type="button">Update Button</button>
+                            <button className="updatebtn me-md-2" type="button">Update Button</button>
                             </Link>
                         </div>
 

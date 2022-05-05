@@ -12,6 +12,7 @@ import MyItems from './Pages/MyItems/MyItems';
 import Signup from './Pages/Signup/Signup';
 import Requireauth from './Pages/RequirAuth/Requireauth';
 import Footer from './Pages/Footer/Footer';
+import { Parallax } from 'react-parallax';
 
 function App() {
   return (
