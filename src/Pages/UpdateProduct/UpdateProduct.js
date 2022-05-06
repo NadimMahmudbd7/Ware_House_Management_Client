@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import PerUSer from '../Shared/PerUser/PerUser';
 
 const UpdateProduct = () => {
@@ -11,21 +12,29 @@ const UpdateProduct = () => {
     const handleDeliverQuentity = (event) => {
         event.preventDefault()
         const quentity = event.target.qty.value
-        const data = {
-            qty: Oneproduct?.product?.qty,
-            deliverQty: quentity,
+        if(quentity===""){
+           toast.error("Please Input Any Qty")
         }
-        const url = `http://localhost:4000/updateproduct/${productId}`
-        fetch(url, {
-            method: "PUT",
-            headers: {
-                "content-type": "application/json",
-            },
-            body: JSON.stringify(data)
-        })
-            .then(res => res.json())
-            .then(data => setOneproduct(data.result))
-        event.target.reset()
+        else{
+            const data = {
+                qty: Oneproduct?.product?.qty,
+                deliverQty: quentity,
+            }
+            const url = `http://localhost:4000/updateproduct/${productId}`
+            fetch(url, {
+                method: "PUT",
+                headers: {
+                    "content-type": "application/json",
+                },
+                body: JSON.stringify(data)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    setOneproduct(data.successfull)
+                    toast.error(data.error)
+                })
+            event.target.reset()
+        }
     }
 
 

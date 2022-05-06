@@ -29,10 +29,10 @@ const Header = () => {
                                 <CustomLink className="nav-link active" to={'/manageitems'}>Manage Items</CustomLink>
                             </li>
                             <li className="nav-item">
-                                <CustomLink className="nav-link active" to={'/additem'}>Add Item</CustomLink>
+                                {user && <CustomLink className="nav-link active" to={'/additem'}>Add Item</CustomLink>}
                             </li>
                             <li className="nav-item">
-                                <CustomLink className="nav-link active" to={"/myitems"}>My Items</CustomLink>
+                                {user && <CustomLink className="nav-link active" to={"/myitems"}>My Items</CustomLink>}
                             </li>
                             <li className="nav-item">
                                 { user ? <CustomLink className="nav-link active" onClick={logout} to={"/login"}>Sign Out</CustomLink> :<CustomLink className="nav-link active" to={"/login"}>Login</CustomLink>}

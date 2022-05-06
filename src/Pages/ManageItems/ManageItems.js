@@ -52,7 +52,7 @@ const ManageItems = () => {
                                 <tr >
                                     <th className='text' scope="row">{product.name}</th>
                                     <td >{product.price}</td>
-                                    <td>{product.qty}</td>
+                                    <td>{product.qty==0?"Sold Out":product.qty}</td>
                                     <td>{product.suppliername}</td>
                                     <td><img className='w-25' src={product.img} alt="" /></td>
                                     <td >

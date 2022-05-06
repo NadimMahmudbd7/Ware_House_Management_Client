@@ -15,7 +15,7 @@ const Product = ({ product }) => {
                         <h5 className="card-title">{product.name}</h5>
                         <p className="card-text">{product.description}</p>
                         <h6 className="card-text">Price: Tk.{product.price}</h6>
-                        <p className="card-text">Quentity: {product.qty}</p>
+                        <p className="card-text">Quentity: {product.qty==0?"Sold Out":product.qty}</p>
                         <p className="card-text"><small>Supplier-Name: {product.suppliername}</small></p>
 
                         <div className="card" style={{ width: "100%" }}></div>
