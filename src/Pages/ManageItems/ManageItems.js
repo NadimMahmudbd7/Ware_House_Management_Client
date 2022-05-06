@@ -17,7 +17,6 @@ const ManageItems = () => {
         const proced = window.confirm("Are You Agree For Delete ?")
         if (proced){
             const url = `http://localhost:4000/products/${id}`
-            console.log(url);
             fetch(url, {
                 method: "DELETE"
             })

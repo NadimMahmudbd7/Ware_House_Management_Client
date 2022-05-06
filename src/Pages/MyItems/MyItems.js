@@ -11,7 +11,7 @@ const MyItems = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setItems(data?.users))
-    }, [user])
+    }, [items])
     return (
         <div>
             <h1 className='text-center mt-2 mb-4'>Your Added Items:{items.length}</h1>

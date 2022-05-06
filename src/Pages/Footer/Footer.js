@@ -6,8 +6,8 @@ const Footer = () => {
             <div className='footer container'>
                 <div className="leftSide">
                     <h3>Walton WereHouse</h3>
-                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ipsam non recusandae. Sequi numquam, consequatur quis blanditiis rerum iusto culpa!</small>
-                    <div className="icon">
+                    <small>Walton is a Bangladeshi conglomerate based in Gazipur, Bangladesh. It comprises numerous subsidiaries and affiliated businesses, most of them united under the Walton brand.</small>
+                    <div className="icon mt-4">
                         <div className="icons">
                             <ion-icon name="logo-facebook"></ion-icon>
                             <ion-icon name="logo-twitter"></ion-icon>

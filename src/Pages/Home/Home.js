@@ -53,7 +53,7 @@ const Home = () => {
 
 
             <section>
-                <h1 className='text-center product my-4'>Inventory <span className='fw-bold'>Products:{products?.length}</span></h1>
+                <h1 className='text-center product my-4'>Inventory <span className='fw-bold'>Products : {products?.length}</span></h1>
                 <hr />
                 <hr className='hr1'/>
                 <div className="row row-cols-1 row-cols-md-3 g-4 w-100">
