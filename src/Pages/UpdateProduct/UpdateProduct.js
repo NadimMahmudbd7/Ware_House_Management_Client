@@ -20,7 +20,7 @@ const UpdateProduct = () => {
                 qty: Oneproduct?.product?.qty,
                 deliverQty: quentity,
             }
-            const url = `http://localhost:4000/updateproduct/${productId}`
+            const url = `https://shrouded-eyrie-37624.herokuapp.com/updateproduct/${productId}`
             fetch(url, {
                 method: "PUT",
                 headers: {
@@ -50,7 +50,7 @@ const UpdateProduct = () => {
                 qty: Oneproduct?.product?.qty,
                 deliverQty: quentity,
             }
-            const url = `http://localhost:4000/updateproducts/${productId}`
+            const url = `https://shrouded-eyrie-37624.herokuapp.com/updateproducts/${productId}`
             fetch(url, {
                 method: "PUT",
                 headers: {

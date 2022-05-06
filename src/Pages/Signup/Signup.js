@@ -65,7 +65,7 @@ const Signup = () => {
     }
 
     if (user || googleUser) {
-        fetch('http://localhost:4000/login', {
+        fetch('https://shrouded-eyrie-37624.herokuapp.com/login', {
             method: 'POST',
             body: JSON.stringify({
                 email:activeUser.email  
@@ -95,7 +95,7 @@ const Signup = () => {
             const confirmPass = event.target.confirmPassword.value
 
 
-            fetch('http://localhost:4000/login', {
+            fetch('https://shrouded-eyrie-37624.herokuapp.com/login', {
                 method: 'POST',
                 body: JSON.stringify({
                     email: email

@@ -9,7 +9,7 @@ const AddItem = () => {
     const { register, handleSubmit } = useForm();
     const [user] = useAuthState(auth)
     const onSubmit = data => {
-        fetch('http://localhost:4000/products', {
+        fetch('https://shrouded-eyrie-37624.herokuapp.com/products', {
             method: "POST",
             headers: {
                 "authorization":`${user?.email} ${localStorage.getItem("AccessToken")}`,

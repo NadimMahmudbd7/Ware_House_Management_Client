@@ -8,7 +8,7 @@ const PerUserItems = ({item}) => {
         console.log(id);
         const proced = window.confirm("Are You Agree For Delete ?")
         if (proced){
-            const url = `http://localhost:4000/products/${id}`
+            const url = `https://shrouded-eyrie-37624.herokuapp.com/products/${id}`
             console.log(url);
             fetch(url, {
                 method: "DELETE"

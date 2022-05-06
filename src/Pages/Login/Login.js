@@ -69,7 +69,7 @@ const Login = () => {
         <p>Loading</p>
     }
     if (user || googleUser) {
-        fetch('http://localhost:4000/login', {
+        fetch('https://shrouded-eyrie-37624.herokuapp.com/login', {
             method: 'POST',
             body: JSON.stringify({
                 email:activeUser.email  
@@ -118,7 +118,7 @@ const Login = () => {
                 </div>
                 {error.password && <p className='error-message'>{error.password}</p>}
                 <a className='forgotPass text-white' onClick={forResetPassword} >Forgot Password</a>
-                <button>Login</button>
+                <button className='updatebtn'>Login</button>
                 <p className='text-white'>Don't have an account? <Link className='text-white' to="/signup">Sign up first</Link> </p>
             </form>
             <div className="or">
@@ -126,7 +126,7 @@ const Login = () => {
                 <div className="middle text-white">or</div>
                 <div className="left"></div>
             </div>
-            <button onClick={() => signInWithGoogle()}>
+            <button className='updatebtn' onClick={() => signInWithGoogle()}>
                 <div className="googleSection">
                     <div className="image">
                         <img className='google' src={google} alt="" />
