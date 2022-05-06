@@ -11,7 +11,7 @@ const Header = () => {
 
     const logout = () => {
         signOut(auth);
-      };
+    };
     return (
         <>
             <nav className="navbar-expand-lg navbar navbar-dark bg-primary sticky-lg-top sticky-sm-top">
@@ -35,10 +35,10 @@ const Header = () => {
                                 {user && <CustomLink className="nav-link active" to={"/myitems"}>My Items</CustomLink>}
                             </li>
                             <li className="nav-item">
-                                { user ? <CustomLink className="nav-link active" onClick={logout} to={"/login"}>Sign Out</CustomLink> :<CustomLink className="nav-link active" to={"/login"}>Login</CustomLink>}
+                                {user ? <CustomLink className="nav-link active" onClick={logout} to={"/login"}>Sign Out</CustomLink> : <CustomLink className="nav-link active" to={"/login"}>Login</CustomLink>}
                             </li>
                             <li className="nav-item">
-                                {user?<CustomLink className="nav-link active d-none" to={"/signup"}>Sign Up</CustomLink> : <CustomLink className="nav-link d-block active" to={"/signup"}>Sign Up</CustomLink>}
+                                {user ? <CustomLink className="nav-link active d-none" to={"/signup"}>Sign Up</CustomLink> : <CustomLink className="nav-link d-block active" to={"/signup"}>Sign Up</CustomLink>}
                             </li>
                         </ul>
                     </div>

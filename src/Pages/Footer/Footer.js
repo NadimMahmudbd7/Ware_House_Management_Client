@@ -9,10 +9,19 @@ const Footer = () => {
                     <small>Walton is a Bangladeshi conglomerate based in Gazipur, Bangladesh. It comprises numerous subsidiaries and affiliated businesses, most of them united under the Walton brand.</small>
                     <div className="icon mt-4">
                         <div className="icons">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                            <ion-icon name="logo-twitter"></ion-icon>
-                            <ion-icon name="logo-google"></ion-icon>
-                            <ion-icon name="logo-google"></ion-icon>
+                        <a target={"_blank"} href='https://www.facebook.com/nadimmahmudbd7/'> 
+                         <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                        <a target={"_blank"} href='https://twitter.com/nadimmahmudytd'> 
+                        <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                        <a target={"_blank"} href='https://twitter.com/nadimmahmudytd'> 
+                        <ion-icon name="logo-google"></ion-icon>
+                        </a>
+                        <a target={"_blank"} href='https://twitter.com/nadimmahmudytd'> 
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                            
                         </div>
                     </div>
                 </div>

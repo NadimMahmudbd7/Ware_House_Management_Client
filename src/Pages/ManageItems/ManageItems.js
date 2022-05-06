@@ -38,7 +38,7 @@ const ManageItems = () => {
                 <th scope="col" >Price</th>
                 <th scope="col" >Quentity</th>
                 <th scope="col" >Supplier Name</th>
-                <th scope="col" >Image</th>
+                <th className='manageItemImage' scope="col" >Image</th>
                 <th scope="col">
                     <span>Delete</span>
                 </th>
@@ -53,7 +53,7 @@ const ManageItems = () => {
                                     <td >{product.price}</td>
                                     <td>{product.qty==0?"Sold Out":product.qty}</td>
                                     <td>{product.suppliername}</td>
-                                    <td><img className='w-25' src={product.img} alt="" /></td>
+                                    <td className='manageItemImage'><img className='w-25' src={product.img} alt="" /></td>
                                     <td >
                                        < button className='updatebtn' onClick={()=>deleteDetails(product._id)} >Delete</button>
                                     </td>

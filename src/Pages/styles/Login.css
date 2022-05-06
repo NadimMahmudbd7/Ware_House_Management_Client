@@ -423,14 +423,7 @@ ion-icon.md.hydrated:hover{
     color: white;
 }
 
-hr{
-    width: 530px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-left: 30%;
-}
+
 .hr1{
     width: 470px;
     display: flex;
@@ -482,4 +475,96 @@ hr{
     background-image: linear-gradient(45deg, #3e32a8,#e310c7);
     padding-top: 1px;
     padding-bottom: 90px;
+}
+
+
+
+
+/* Responsive  */
+@media screen and (max-width:688px) {
+    .brand{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 40px;
+        text-align: center;
+    }
+    .image1::after,.image2::after,.image3::after,.image4::after,.image5::after{
+        content: "";
+        position: absolute;
+        background-color: rgb(92, 86, 76);
+        width: 1px;
+        height: 47px;
+        margin-left: 50px;
+    }
+    .image1::before,.image2::before,.image3::before,.image4::before,.image5::before{
+        content: "";
+        position: absolute;
+        background-color: rgb(92, 86, 76);
+        width: 1px;
+        height: 47px;
+        margin-left: -60px;
+    }
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 40px;
+    }
+    .paralexImage{
+        width: 100%;
+    }
+    .progressRightSide{
+        display: none;
+    }
+    .progressLeftSide{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .playbtn{
+        margin: auto;
+    }
+    hr{
+        display: none;
+    }
+    .paralaxtext{
+        width: 300px;
+        margin: auto;
+        
+    }
+    .subscriberText{
+        font-size: 20px;
+    }
+    .subscriberDes{
+        display: none;
+    }
+    .input{
+        display: flex;
+        flex-direction: column;
+    }
+    .inputField{
+        width: 200px;
+    }
+    img.react-parallax-bgimage {
+        width: 396px !important;
+        height: 480px !important;
+    }
+    .manageItemImage{
+        display: none;
+    }
+    .updateInventory{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .updatecard{
+        width: 80%;
+    }
+    .inventoryBtn{
+       margin-top: 20px;
+       width: 98%;
+    }
+
 }
