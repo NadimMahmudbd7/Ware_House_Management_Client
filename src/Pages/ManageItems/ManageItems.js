@@ -33,7 +33,7 @@ const ManageItems = () => {
         <div data-aos="fade-up">
             <Helmeted title={"Manage Items"}></Helmeted>
             <h1 className='text-center my-3'>Inventory Total Products:{products.length}</h1>
-            <table className='table table-striped table-dark'>
+            <table className='table table-striped table-dark manageItems'>
                 <thead>
                 <tr>
                 <th scope="col text-black">Product Name</th>
