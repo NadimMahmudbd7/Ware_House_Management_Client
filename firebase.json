@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "build/walton werehouse",
+    "public": "build",
     "ignore": [
       "firebase.json",
       "**/.*",
