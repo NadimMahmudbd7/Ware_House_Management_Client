@@ -14,6 +14,7 @@ import Requireauth from './Pages/RequirAuth/Requireauth';
 import Footer from './Pages/Footer/Footer';
 import NotFound from './Pages/NotFound/NotFound';
 import { Parallax } from 'react-parallax';
+import Blog from './Pages/Blog/Blog';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
+        <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

@@ -7,6 +7,7 @@ import "../styles/Login.css"
 import auth from '../../firebase.init';
 import { toast } from 'react-toastify';
 import google from '../Images/google.png'
+import Helmeted from '../Helmet/Helmet';
 
 const Login = () => {
     const [activeUser] = useAuthState(auth)
@@ -104,7 +105,8 @@ const Login = () => {
     }, [HookError])
 
     return (
-        <div className='addForm'>
+        <div className='addForm' data-aos="zoom-out">
+            <Helmeted title={"Login"}></Helmeted>
             <div className="login-container animate__animated wow animate__zoomIn">
             <div className="login-title text-white">LOGIN</div>
             <form onSubmit={handleEmail} className="login-form">

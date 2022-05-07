@@ -12,6 +12,7 @@ import logo3 from "../Images/logo-3.png";
 import logo4 from "../Images/logo-4.png";
 import logo5 from "../Images/logo-5.png";
 import Product from '../Product/Product';
+import Helmeted from '../Helmet/Helmet';
 
 const Home = () => {
     const [products, setProducts] = useState([])
@@ -23,12 +24,13 @@ const Home = () => {
             .then(data => setProducts(data.products))
     }, [])
 
-    const Subscribe=()=>{
+    const Subscribe = () => {
         toast.success("Thanks For Subscriber")
     }
 
     return (
         <>
+            <Helmeted title={''}></Helmeted>
             <ScrollToTop smooth />
             {/* ------------------------------------------------Carosel Section start------------------------------- */}
 
@@ -71,7 +73,7 @@ const Home = () => {
             {/* paralax for newsletter */}
 
             <Parallax className='paralex newsleterImage' strength={200} bgImage={banner3} style={{ height: "500px" }}>
-                <div  className='paralaxtext'>
+                <div className='paralaxtext' >
                     <h3 className='subscriberText'>SUBSCRIBE TO OUR NEWSLETTER</h3>
                     <small className='subscriberDes'>We will send you one email each month, we don't send promotions, we don't like spam. You can unsubscribe immediately by clicking the unsubscribe link at the bottom of the emails.</small>
                     <div className="input">
@@ -89,7 +91,7 @@ const Home = () => {
             </Parallax>
 
             {/* brand */}
-            <div className='brand'>
+            <div className='brand' data-aos="fade-up">
                 <div className="image1">
                     <img className='brandimg' src={logo1} alt="" />
                 </div>
@@ -111,19 +113,23 @@ const Home = () => {
 
 
                 <div className="progressBar container">
-                    <div className="progressLeftSide">
+                    <div className="progressLeftSide" data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">
                         <div>
-                        <h1 className='watchText'>WATCH OUR COMPANY PRESENTATION</h1>
-                        <small className='text-white'>Watch Video</small>
-                        <a target={"_blank"} href='https://www.youtube.com/watch?v=LeLZFuO6O6U'>
-                            <div className="playbtn">
-                                <ion-icon lassName="playbtnForMobile" style={{color:"white" ,margin:"0px"}} name="play-outline"></ion-icon>
-                            </div>
-                        </a>
+                            <h1 className='watchText'>WATCH OUR COMPANY PRESENTATION</h1>
+                            <small className='text-white'>Watch Video</small>
+                            <a target={"_blank"} href='https://www.youtube.com/watch?v=LeLZFuO6O6U'>
+                                <div className="playbtn">
+                                    <ion-icon lassName="playbtnForMobile" style={{ color: "white", margin: "0px" }} name="play-outline"></ion-icon>
+                                </div>
+                            </a>
                         </div>
 
                     </div>
-                    <div className="progressRightSide">
+                    <div className="progressRightSide" data-aos="fade-down"
+                        data-aos-easing="linear"
+                        data-aos-duration="1500">
                         <div className="cusSaticfaction">
                             <h5 className='CusText'>SATICFACTION</h5>
                             <div className="progress1">

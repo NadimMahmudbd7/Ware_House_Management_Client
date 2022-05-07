@@ -1,4 +1,5 @@
 import React,{useEffect,useState} from 'react';
+import Helmeted from '../Helmet/Helmet';
 import "./ManageItems.css"
 
 const ManageItems = () => {
@@ -29,7 +30,8 @@ const ManageItems = () => {
 
     }
     return (
-        <div >
+        <div data-aos="fade-up">
+            <Helmeted title={"Manage Items"}></Helmeted>
             <h1 className='text-center my-3'>Inventory Total Products:{products.length}</h1>
             <table className='table table-striped table-dark'>
                 <thead>
@@ -48,7 +50,7 @@ const ManageItems = () => {
                     {
                         products.map(product=>{
                             return(
-                                <tr >
+                                <tr>
                                     <th className='text' scope="row">{product.name}</th>
                                     <td >{product.price}</td>
                                     <td>{product.qty==0?"Sold Out":product.qty}</td>

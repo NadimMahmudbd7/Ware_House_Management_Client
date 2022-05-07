@@ -1,24 +1,27 @@
 import React from 'react';
-
+import logo from "../Images/logo.png"
 const Footer = () => {
     return (
-        <div className='totalFooter'>
+        <div className='totalFooter' data-aos="fade-up">
             <div className='footer container'>
                 <div className="leftSide">
-                    <h3>Walton WereHouse</h3>
+                    <div className="footerTitle d-flex mb-3">
+                    <img src={logo} width="30" height="30" style={{width:"15%", marginRight:"10px"}} class="d-inline-block align-top" alt="" />
+                    <h3>Walton House</h3>
+                    </div>
                     <small>Walton is a Bangladeshi conglomerate based in Gazipur, Bangladesh. It comprises numerous subsidiaries and affiliated businesses, most of them united under the Walton brand.</small>
                     <div className="icon mt-4">
                         <div className="icons">
                         <a target={"_blank"} href='https://www.facebook.com/nadimmahmudbd7/'> 
                          <ion-icon name="logo-facebook"></ion-icon>
                         </a>
-                        <a target={"_blank"} href='https://twitter.com/nadimmahmudytd'> 
+                        <a target={"_blank"} href='https://www.linkedin.com/in/nadim-mahmud-49127b164/'> 
                         <ion-icon name="logo-twitter"></ion-icon>
                         </a>
-                        <a target={"_blank"} href='https://twitter.com/nadimmahmudytd'> 
+                        <a target={"_blank"} href='https://www.linkedin.com/in/nadim-mahmud-49127b164/'> 
                         <ion-icon name="logo-google"></ion-icon>
                         </a>
-                        <a target={"_blank"} href='https://twitter.com/nadimmahmudytd'> 
+                        <a target={"_blank"} href='https://www.linkedin.com/in/nadim-mahmud-49127b164/'> 
                         <ion-icon name="logo-linkedin"></ion-icon>
                         </a>
                             
@@ -28,10 +31,10 @@ const Footer = () => {
                 <div className="middleSide">
                     <h4>CONTACT INFO</h4>
                     <ul>
-                        <li>201 Liverpool Street, Suite 721, London</li>
-                        <li>London, United Kingdom</li>
-                        <li>youremail@yourdomain.com</li>
-                        <li>+88 (0) 101 0000 000</li>
+                        <li>201 Basundhara, Suite 721, Dhaka</li>
+                        <li>Dhaka, Bangladesh</li>
+                        <li>nadimmahmudytd@gmail.com</li>
+                        <li>+8801742819935</li>
                     </ul>
                 </div>
                 <div className="rightSide">

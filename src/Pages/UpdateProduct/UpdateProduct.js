@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import Helmeted from '../Helmet/Helmet';
 import PerUSer from '../Shared/PerUser/PerUser';
 
 const UpdateProduct = () => {
@@ -70,6 +71,7 @@ const UpdateProduct = () => {
 
     return (
         <div>
+            <Helmeted title={"Update Product"}></Helmeted>
             <h1 className='text-center mb-5 mt-2'>Manage Your Stock Product : {Oneproduct?.product?.name}</h1>
             <div className="updateInventory">
                 <div className="card updatecard h-100">

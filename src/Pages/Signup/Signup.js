@@ -119,7 +119,7 @@ const Signup = () => {
 
 
     return (
-        <div className='addForm'>
+        <div className='addForm' data-aos="zoom-out">
             <div className="login-container animate__animated wow animate__zoomIn">
             <div className="login-title">SIGNUP</div>
             <form onSubmit={handleEmail} className="login-form">

@@ -8,8 +8,8 @@ const Product = ({ product }) => {
 
     return (
         <div>
-            <div className="col container">
-                <div className="card h-100">
+            <div className="col container" data-aos="fade-up">
+                <div className="card h-100 productCardBody">
                     <img src={product.img} alt="" className="card-img-top" />
                     <div className="card-body">
                         <h5 className="card-title">{product.name}</h5>
@@ -21,7 +21,7 @@ const Product = ({ product }) => {
                         <div className="card" style={{ width: "100%" }}></div>
                         <div className="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
                             <Link to={`/updateproduct/${product._id}`}>
-                            <button className="updatebtn me-md-2" type="button">Update Button</button>
+                            <button className="updatebtn me-md-2" type="button">Update Product</button>
                             </Link>
                         </div>
 

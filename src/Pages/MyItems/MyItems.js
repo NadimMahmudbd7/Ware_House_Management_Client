@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import Helmeted from '../Helmet/Helmet';
 import PerUserItems from '../PerUserItems/PerUserItems';
 
 const MyItems = () => {
@@ -14,8 +15,9 @@ const MyItems = () => {
     }, [items])
     return (
         <div>
-            <h1 className='text-center mt-2 mb-4'>Your Added Items : {items.length}</h1>
-            <div className="row row-cols-1 row-cols-md-3 g-4">
+            <Helmeted title={"My Items"}></Helmeted>
+            <h1 className='text-center mt-2 mb-4' data-aos="fade-down">Your Added Items : {items.length}</h1>
+            <div className="row row-cols-1 row-cols-md-3 g-4" style={{width:"100%"}}>
             {
                 items.map(item => <PerUserItems item={item} key={item._id}></PerUserItems>)
             }

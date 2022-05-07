@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Helmeted from '../Helmet/Helmet';
 
 const PerUserItems = ({item}) => {
 
@@ -23,7 +24,8 @@ const PerUserItems = ({item}) => {
     }
     return (
         <div>
-            <div className="col container">
+            <Helmeted title={"My Items"}></Helmeted>
+            <div className="col container" data-aos="zoom-out-right">
                 <div className="card h-100">
                     <img src={item.img} alt="" className="card-img-top" />
                     <div className="card-body">
