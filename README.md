@@ -15,6 +15,9 @@ Live website link: https://walton-werehouse.web.app/
 * if you want update quentity (deliver or restock) then click "update product" button
 * I was fix all type of error. like:- emply button click, minus quentity product add or deliver etc.
 * You can add new item in your account and manage items (per user account).click "add new item".
+* added extra route customer support. you can see all support condition.
+* you can see your name first digit in navbar profile.
+* if you hover in your profile name, you can see your full registered email.
 * when you added your product you can see your added product in "my items" route. you can also update and delete in this section.
 
 ## Used Library/Framework
