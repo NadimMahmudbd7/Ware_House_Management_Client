@@ -4,6 +4,7 @@ import { signOut } from 'firebase/auth';
 import auth from '../../firebase.init';
 import CustomLink from '../CustomeLink/CustomLink';
 import logo from "../Images/logo.png"
+import { Link } from "react-router-dom";
 
 const Header = () => {
     const [user] = useAuthState(auth);
@@ -19,9 +20,10 @@ const Header = () => {
         <>
             <nav className="navbar-expand-lg navbar navbar-dark bg-primary sticky-lg-top sticky-sm-top">
                 <div className="container-fluid container">
+                    <Link to={"/"} className="logo">
                     <a className="navbar-brand" href="#" >
                         <img src={logo} width="30" height="30" style={{width:"25%", marginRight:"10px"}} className="d-inline-block align-top " alt="" />
-                         <span>Walton</span> House</a>
+                         <span>Walton</span> House</a></Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

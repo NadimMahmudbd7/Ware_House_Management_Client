@@ -584,6 +584,10 @@ ion-icon.md.hydrated:hover{
     transform: translateY(-10px);
     transition: 0.3s ease-in-out;
 }
+.logo{
+    list-style: none;
+    text-decoration: none;
+}
 
 /* Responsive  */
 @media screen and (max-width:688px) {
