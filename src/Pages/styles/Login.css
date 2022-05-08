@@ -697,5 +697,8 @@ ion-icon.md.hydrated:hover{
         font-size: 15px;
         color: #666060;
     }
+    .blogCard{
+        height: 700px;
+    }
 
 }
