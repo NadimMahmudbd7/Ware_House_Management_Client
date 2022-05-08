@@ -501,7 +501,7 @@ ion-icon.md.hydrated:hover{
     transition: 0.4s;
 }
 .styles_scroll-to-top__2A70v {
-    bottom: 70px;
+    bottom: 65px !important;
 }
 
 .nav-link:hover{
