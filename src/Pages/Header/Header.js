@@ -1,5 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import "./Header.css"
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { signOut } from 'firebase/auth';
@@ -10,6 +8,7 @@ import logo from "../Images/logo.png"
 const Header = () => {
     const [user] = useAuthState(auth);
     const profile = (user?.email)?.slice(0,1).toUpperCase()
+
     
   
 

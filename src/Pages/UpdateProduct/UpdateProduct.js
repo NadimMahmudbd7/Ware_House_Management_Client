@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Helmeted from '../Helmet/Helmet';
 import PerUSer from '../Shared/PerUser/PerUser';
+import ScrollToTop from "react-scroll-to-top";
 
 const UpdateProduct = () => {
     const { productId } = useParams()
@@ -70,6 +71,8 @@ const UpdateProduct = () => {
     }
 
     return (
+        <>
+        <ScrollToTop smooth />
         <div>
             <Helmeted title={"Update Product"}></Helmeted>
             <h1 className='text-center mb-5 mt-2'>Manage Your Stock Product : {Oneproduct?.product?.name}</h1>
@@ -110,6 +113,7 @@ const UpdateProduct = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

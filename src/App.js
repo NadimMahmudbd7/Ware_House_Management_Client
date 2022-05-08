@@ -16,10 +16,12 @@ import NotFound from './Pages/NotFound/NotFound';
 import { Parallax } from 'react-parallax';
 import Blog from './Pages/Blog/Blog';
 import CustomerCare from './Pages/CustomerCare/CustomerCare';
+import ScrollToTop from './Pages/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
     <div>
+      <ScrollToTop></ScrollToTop>
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
