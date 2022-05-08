@@ -120,7 +120,7 @@ const Signup = () => {
         }
     }
 
-
+    console.log(googleUser);
     return (
         <>
             <ScrollToTop smooth />
@@ -148,7 +148,7 @@ const Signup = () => {
                         <div className="left"></div>
                     </div>
 
-                    <button className='updatebtn' onClick={() => signInWithGoogle()}>
+                    <button className='updatebtn' onClick={()=>signInWithGoogle() }>
                         <div className="googleSection">
                             <div className="image">
                                 <img className='google' src={google} alt="" />

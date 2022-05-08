@@ -5,18 +5,21 @@ import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
 
 const Requireauth = ({ children }) => {
-    const [user, loading, error] = useAuthState(auth);
+  const [user, loading, error] = useAuthState(auth);
   let location = useLocation();
   console.log(user);
-  if(loading){
+  if (loading) {
     return <Loading></Loading>
   }
   if (!user) {
-    
+
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
-  
-    return children
+  if (!user?.emailVerified) {
+    return <div className='text-center mt-5' style={{fontSize:"30px"}}>Please Verify Your Mail...</div>
+  }
+
+  return children
 };
 
 export default Requireauth;
