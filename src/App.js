@@ -15,6 +15,7 @@ import Footer from './Pages/Footer/Footer';
 import NotFound from './Pages/NotFound/NotFound';
 import { Parallax } from 'react-parallax';
 import Blog from './Pages/Blog/Blog';
+import CustomerCare from './Pages/CustomerCare/CustomerCare';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/customercare' element={<CustomerCare></CustomerCare>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

@@ -29,7 +29,8 @@ const Home = () => {
     }
 
     return (
-        <>
+        <>  
+        
             <Helmeted title={''}></Helmeted>
             <ScrollToTop smooth />
             {/* ------------------------------------------------Carosel Section start------------------------------- */}

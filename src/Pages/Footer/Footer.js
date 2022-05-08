@@ -2,7 +2,7 @@ import React from 'react';
 import logo from "../Images/logo.png"
 const Footer = () => {
     return (
-        <div className='totalFooter' data-aos="fade-up">
+        <div className='totalFooter'>
             <div className='footer container'>
                 <div className="leftSide">
                     <div className="footerTitle d-flex mb-3">
@@ -47,7 +47,7 @@ const Footer = () => {
                 </div>
             </div>
             <hr className='mt-5' />
-            <small className='text-center copyRight'>&copy; 2022 All Right Reserved</small>
+            <small className='text-center copyRight'>&copy; 2022 All Right Reserved Walton House</small>
         </div>
     );
 };

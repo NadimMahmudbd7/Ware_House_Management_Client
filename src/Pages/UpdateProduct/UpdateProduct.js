@@ -90,7 +90,7 @@ const UpdateProduct = () => {
                 <div className='inventoryBtn'>
                     <form action="" onSubmit={handleDeliverQuentity}>
                         <div className="deliverBtn">
-                            <input className='textInput' type="text" name="qty" id="qty" placeholder='Deliver Qty' />
+                            <input className='textInput' type="number" name="qty" id="qty" placeholder='Deliver Qty' />
                             <div>
                                 <input className='btn btn-primary' type="submit" value="Product Deliver" />
                             </div>
@@ -99,7 +99,7 @@ const UpdateProduct = () => {
                     <div className="addBtn">
                         <form action="" onSubmit={handleAddProducts}>
                             <div className="addBtn">
-                                <input className='textInput' type="text" name="qty" id="qty" placeholder='Add Qty' />
+                                <input className='textInput' type="number" name="qty" id="qty" placeholder='Add Qty' />
                                 <div>
                                     <input className='btn btn-primary' type="submit" value="Product Add" />
                                 </div>
