@@ -5,6 +5,7 @@ import './AddItem.css'
 import auth from '../../firebase.init';
 import { toast } from 'react-toastify';
 import Helmeted from '../Helmet/Helmet';
+import ScrollToTop from 'react-scroll-to-top';
 
 const AddItem = () => {
     const { register, handleSubmit } = useForm();
@@ -32,6 +33,8 @@ const AddItem = () => {
             })
     }
     return (
+        <>
+        <ScrollToTop smooth />
         <div className='addForm' data-aos="zoom-out">
             <Helmeted title={"Add Items"}></Helmeted>
             <h1 className='text-center my-4 text-white'>Add Your Item:</h1>
@@ -46,7 +49,7 @@ const AddItem = () => {
                 <input type="submit" className='addbtn' />
             </form>
 
-        </div>
+        </div></>
     );
 };
 

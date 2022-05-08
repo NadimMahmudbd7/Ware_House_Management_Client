@@ -1,9 +1,11 @@
 import React from 'react';
+import ScrollToTop from 'react-scroll-to-top';
 import Helmeted from '../Helmet/Helmet';
 
 const Blog = () => {
     return (
         <div>
+            <ScrollToTop smooth />
             <Helmeted title={"Blog"}></Helmeted>
             <div className="questionAndAnswer backGroundSection">
                 <h2 className="text-center text-4xl my-10  questionTitle" data-aos="fade-down">Question And Answer</h2>

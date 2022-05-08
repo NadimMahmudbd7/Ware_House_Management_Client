@@ -52,7 +52,7 @@ const Header = () => {
                             <li className="nav-item">
                                 {user ? <CustomLink className="nav-link active d-none" to={"/signup"}>Sign Up</CustomLink> : <CustomLink className="nav-link d-block active" to={"/signup"}>Sign Up</CustomLink>}
                             </li>
-                            {user && <li className="nav-item">
+                            {user && <li className="nav-item" title={user?.email}>
                                 <div className='profile'>
                                     <h3 className='profileName'>{profile}</h3>
                                 </div>

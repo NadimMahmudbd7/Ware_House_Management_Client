@@ -1,7 +1,11 @@
 import React from 'react';
+import ScrollToTop from 'react-scroll-to-top';
 
 const CustomerCare = () => {
     return (
+        
+        <>
+        <ScrollToTop smooth />
         <div data-aos="zoom-out">
             <h3 className='container my-4'>Seller Help Center</h3>
             <div className="helpField">
@@ -83,6 +87,7 @@ const CustomerCare = () => {
             </div>
             </div>
         </div>
+        </>
     );
 };
 

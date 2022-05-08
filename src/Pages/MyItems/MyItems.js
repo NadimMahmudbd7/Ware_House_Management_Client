@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import ScrollToTop from 'react-scroll-to-top';
 import auth from '../../firebase.init';
 import Helmeted from '../Helmet/Helmet';
 import PerUserItems from '../PerUserItems/PerUserItems';
@@ -15,6 +16,7 @@ const MyItems = () => {
     }, [items])
     return (
         <div>
+            <ScrollToTop smooth />
             <Helmeted title={"My Items"}></Helmeted>
             <h1 className='text-center mt-2 mb-4' data-aos="fade-down">Your Added Items : {items.length}</h1>
             <div className="row row-cols-1 row-cols-md-3 g-4" style={{width:"100%"}}>

@@ -1,18 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import ScrollToTop from 'react-scroll-to-top';
 import Helmeted from '../Helmet/Helmet';
 import AllProducts from '../Shared/PerUser/AllProducts';
 import "./ManageItems.css"
 
 const ManageItems = () => {
-    // const [products, setProducts] = useState([])
-
-    // useEffect(() => {
-    //     const url = "https://shrouded-eyrie-37624.herokuapp.com/products"
-    //     fetch(url)
-    //         .then(res => res.json())
-    //         .then(data => setProducts(data?.allProducts))
-    // }, [products])
     const [products, setProducts] = AllProducts()
 
     const deleteDetails = (id) => {
@@ -33,6 +26,7 @@ const ManageItems = () => {
     }
     return (
         <div data-aos="fade-up">
+            <ScrollToTop smooth />
             <Helmeted title={"Manage Items"}></Helmeted>
             <h1 className='text-center my-3'>Inventory Total Products:{products.length}</h1>
             <table className='table table-striped table-dark manageItems'>
