@@ -493,7 +493,7 @@ ion-icon.md.hydrated:hover{
 .blogCard{
     backdrop-filter: blur(10px);
     background-image: linear-gradient(45deg, rgb(247, 247, 248),rgb(199, 239, 255));
-    height: 400px;
+    height: 470px;
     border-radius: 20px;
 }
 .productCardBody:hover{

@@ -11,19 +11,19 @@ const Blog = () => {
                     <div className="bg-white p-10 " data-aos="fade-right">
                         <div className="card blogCard">
                             <div className="card-body" >
-                                <h5 className="card-title text-center mb-3 text-xl">Q1: Authentication VS Authorization</h5>
+                                <h5 className="card-title text-center mb-3 text-xl">Q1: Differences between sql and nosql databases ?</h5>
                                 <div className="compare">
                                     <div className="authentication">
-                                        <h6>Authentication</h6>
-                                        <p>Authentication verifies who the user is.</p>
-                                        <p>At first verify Authentication Who are you.</p>
-                                        <p>	It needs usually user’s login details.</p>
+                                        <h6>SQL</h6>
+                                        <p>SQL databases have fixed or static or predefined schema.</p>
+                                        <p>SQL databases are vertically scalable.</p>
+                                        <p>SQL databases are best suited for complex queries.</p>
                                     </div>
                                     <div className="authorization">
-                                        <h6>Authorization</h6>
-                                        <p>Authorization determines what resources a user can access.</p>
-                                        <p>Authorization check what permission do you have.</p>
-                                        <p>While it needs user’s privilege or security levels.</p>
+                                        <h6>NOSQL</h6>
+                                        <p>NoSQL databases are horizontally scalable.</p>
+                                        <p>NoSQL databases have dynamic schema.</p>
+                                        <p>These databases are not so good for complex queries.</p>
                                     </div>
                                 </div>
                             </div>
@@ -32,35 +32,31 @@ const Blog = () => {
                     <div className="bg-white p-10 " data-aos="fade-left">
                         <div className="card blogCard">
                             <div className="card-body">
-                                <h5 className="card-title text-center mb-3 text-xl">Q2: Why Use Firebase for alternative and Firebase alternative for Authentication</h5>
-                                <h6>Why Use Firebase Authentication</h6>
+                                <h5 className="card-title text-center mb-3 text-xl">Q2: When should you use nodejs and when should you use mongodb ?</h5>
                                 <p className="card-text">
-                                    Firebase Authentication is fully secure for authentication systems easy. while improving the sign-in experience for end users.  It provides an end-to-end identity solution, supporting email and password accounts, phone auth, and Google, Twitter, Facebook, and GitHub login, and more.
+                                MongoDB is the Document Oriented Database. MongoDB stores a lot of data in JSON format. MongoDB's performance is much faster than any RDBMS. MongoDB is designed to work with Large Scale Data.Any project needs a programming environment and a runtime library that offers you basic programming tools/support and can compile and/or interpret your code. Nodejs is such as tool for the Javascript programming language .So, if i want to write some kind of stand-alone program or server in Javascript, then i can use nodejs for it. MongoDB- If my application needs the ability to persistently store data in a way that you can efficiently query or update it later, then i Use MongoDB or any Other Database If my application needs the ability to persistently store data in a way that you can efficiently query or update it later, then i Use MongoDB or any Other Database.
                                 </p>
-                                <h6>Firebase alternative for Authentication</h6>
-                                <li>Auth0</li>
-                                <li>Okta</li>
-                                <li>Keycloak</li>
-                                and more
                             </div>
                         </div>
                     </div>
                     <div className="bg-white p-10">
-                        <div className="card blogCard">
-                            <div className="card-body">
-                                <h5 className="card-title text-center mb-3 text-xl">Q3: what other service does firebase provide other then authentication</h5>
-                                <h6>There are many services which Firebase provides, Most useful of them are:</h6>
-                                <p className="card-text">
-                                    <li>Cloud Firestore</li>
-                                    <li>Cloud Functions</li>
-                                    <li>Hosting</li>
-                                    <li>Cloud Storage</li>
-                                    <li>Google Analytics</li>
-                                    <li>Predictions</li>
-                                    <li>GCloud Messaging</li>
-                                    <li>Dynamic Links</li>
-                                    <li>Remote Config</li>
-                                </p>
+                    <div className="card blogCard">
+                            <div className="card-body" >
+                                <h5 className="card-title text-center mb-3 text-xl">Q3: Difference between javascript and nodejs ?</h5>
+                                <div className="compare">
+                                    <div className="authentication">
+                                        <h6>Javascript</h6>
+                                        <p>Javascript is capable enough to add HTML and play with the DOM.</p>
+                                        <p>Javascript is used in frontend development.</p>
+                                        <p>It is basically used on the client-side.</p>
+                                    </div>
+                                    <div className="authorization">
+                                        <h6>NodeJS</h6>
+                                        <p>It is mostly used on the server-side.</p>
+                                        <p>Nodejs is used in server-side development.</p>
+                                        <p>Nodejs does not have capability to add HTML tags.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
