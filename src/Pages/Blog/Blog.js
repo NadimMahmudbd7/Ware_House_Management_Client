@@ -31,7 +31,7 @@ const Blog = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="bg-white p-10 " data-aos="fade-left">
+                    <div className="bg-white p-10 " data-aos="zoom-out">
                         <div className="card blogCard">
                             <div className="card-body">
                                 <h5 className="card-title text-center mb-3 text-xl">Q2: When should you use nodejs and when should you use mongodb ?</h5>
