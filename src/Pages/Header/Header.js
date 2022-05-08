@@ -8,10 +8,26 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
     const [user] = useAuthState(auth);
-    const profile = (user?.email)?.slice(0,1).toUpperCase()
+    const profile = (user?.email)?.slice(0,1).toUpperCase() 
 
-    
-  
+    function userProfile(){
+        if(!user){
+            return <div className='profile d-none'>
+            <h3 className='profileName'>{profile}</h3>
+        </div>
+        }
+        if(!user?.displayName){
+            return <div className='profile' title={user?.email}>
+            <h3 className='profileName'>{profile}</h3>
+        </div>
+        }
+        if(user?.photoURL){
+            return <div className='profile' title={user?.displayName}>
+            <img className="profileImage" src={user?.photoURL} alt="" />
+        </div>
+        }
+    }
+ 
 
     const logout = () => {
         signOut(auth);
@@ -53,11 +69,7 @@ const Header = () => {
                             <li className="nav-item">
                                 {user ? <CustomLink className="nav-link active d-none" to={"/signup"}>Sign Up</CustomLink> : <CustomLink className="nav-link d-block active" to={"/signup"}>Sign Up</CustomLink>}
                             </li>
-                            {user && <li className="nav-item" title={user?.email}>
-                                <div className='profile'>
-                                    <h3 className='profileName'>{profile}</h3>
-                                </div>
-                            </li>}
+                            {userProfile()}
                         </ul>
                     </div>
                 </div>

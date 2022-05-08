@@ -19,7 +19,7 @@ const Signup = () => {
     const [error, setError] = useState({ email: '', password: '' })
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
-
+    
     const [
         createUserWithEmailAndPassword,
         user,
@@ -112,7 +112,6 @@ const Signup = () => {
             await createUserWithEmailAndPassword(email, password)
             toast('Account Successfully Created');
             await updateProfile({ displayName: userInfo.name });
-            console.log(email, password, confirmPass);
             navigate("/")
 
         }

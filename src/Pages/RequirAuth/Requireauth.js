@@ -7,6 +7,7 @@ import Loading from '../Loading/Loading';
 const Requireauth = ({ children }) => {
     const [user, loading, error] = useAuthState(auth);
   let location = useLocation();
+  console.log(user);
   if(loading){
     return <Loading></Loading>
   }
@@ -14,9 +15,7 @@ const Requireauth = ({ children }) => {
     
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
-  if(!user?.emailVerified){
-    return <div className='text-center fw-bold' style={{fontSize:"40px", marginTop:"20px"}}>Please Verify Your Mail</div>
-}
+  
     return children
 };
 

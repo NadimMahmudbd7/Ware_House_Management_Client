@@ -588,6 +588,10 @@ ion-icon.md.hydrated:hover{
     list-style: none;
     text-decoration: none;
 }
+.profileImage{
+    width: 40px;
+    border-radius: 50%;
+}
 
 /* Responsive  */
 @media screen and (max-width:688px) {

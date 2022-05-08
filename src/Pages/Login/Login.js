@@ -26,7 +26,7 @@ const Login = () => {
     let from = location.state?.from?.pathname || "/";
     const [userInfo, setUserInfo] = useState({ email: '', password: '' })
     const [error, setError] = useState({ email: '', password: '' })
-
+    console.log(activeUser);
     const forEmail = (event) => {
         const invalidEmail = event.target.value;
         if (/\S+@\S+\.\S+/.test(invalidEmail)) {
