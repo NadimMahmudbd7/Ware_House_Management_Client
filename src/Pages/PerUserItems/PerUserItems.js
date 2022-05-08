@@ -38,7 +38,7 @@ const PerUserItems = ({item}) => {
                         <div className="card" style={{ width: "100%" }}></div>
                         <div className="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
                             <Link to={`/updateproduct/${item._id}`}>
-                            <button className="btn btn-primary me-md-2" type="button">Update Button</button>
+                            <button className="btn btn-primary me-md-2" type="button">Update Product</button>
                             </Link>
                             <button onClick={()=>deleteDetails(item._id)} className="btn btn-danger me-md-2" type="button">Delete Button</button>
                         </div>

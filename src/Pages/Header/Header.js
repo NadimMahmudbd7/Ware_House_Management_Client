@@ -61,7 +61,7 @@ const Header = () => {
                                 <CustomLink className="nav-link active" to={"/blog"}>Blog</CustomLink>
                             </li>
                             <li className="nav-item">
-                                <CustomLink className="nav-link active" to={"/customercare"}>Customar Care</CustomLink>
+                                <CustomLink className="nav-link active" to={"/customercare"}>Customer Care</CustomLink>
                             </li>
                             <li className="nav-item">
                                 {user ? <CustomLink className="nav-link active" onClick={logout} to={"/login"}>Sign Out</CustomLink> : <CustomLink className="nav-link active" to={"/login"}>Login</CustomLink>}

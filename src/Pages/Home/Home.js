@@ -13,6 +13,7 @@ import logo4 from "../Images/logo-4.png";
 import logo5 from "../Images/logo-5.png";
 import Product from '../Product/Product';
 import Helmeted from '../Helmet/Helmet';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const [products, setProducts] = useState([])
@@ -23,14 +24,18 @@ const Home = () => {
             .then(res => res.json())
             .then(data => setProducts(data.products))
     }, [])
+    
+    useEffect(()=>{
+        window.history.scrollRestoration = 'manual'
+    },[])
 
     const Subscribe = () => {
         toast.success("Thanks For Subscriber")
     }
 
     return (
-        <>  
-        
+        <>
+
             <Helmeted title={''}></Helmeted>
             <ScrollToTop smooth />
             {/* ------------------------------------------------Carosel Section start------------------------------- */}
@@ -61,11 +66,18 @@ const Home = () => {
 
 
             <section>
-                <h1 className='text-center product my-4'>Inventory <span className='fw-bold'>Products : {products?.length}</span></h1>
-                <div className=" mx-auto row row-cols-1 row-cols-md-3 g-4 w-100">
-                    {
-                        products?.map(product => <Product product={product} key={product._id} ></Product>)
-                    }
+                <div>
+                    <h1 className='text-center product my-4'>Inventory <span className='fw-bold'>Products : {products?.length}</span></h1>
+                    <div className=" mx-auto row row-cols-1 row-cols-md-3 g-4 w-100">
+                        {
+                            products?.map(product => <Product product={product} key={product._id} ></Product>)
+                        }
+                    </div>
+                    <div className='allItems'>
+                        <Link to={"/manageitems"}>
+                        <button className='.login-container button, updatebtn'>Manage All Products</button>
+                        </Link>
+                    </div>
                 </div>
 
             </section>

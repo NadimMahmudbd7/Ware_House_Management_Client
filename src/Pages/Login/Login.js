@@ -124,7 +124,7 @@ const Login = () => {
                     {error.password && <p className='error-message'>{error.password}</p>}
                     <a className='forgotPass text-white' onClick={forResetPassword} >Forgot Password</a>
                     <button className='updatebtn'>Login</button>
-                    <p className='text-white'>Don't have an account? <Link className='text-white' to="/signup">Sign up first</Link> </p>
+                    <p className='text-white'>Don't have an account? <Link className='text-white' to="/signup">Sign up</Link> </p>
                 </form>
                 <div className="or">
                     <div className="right"></div>

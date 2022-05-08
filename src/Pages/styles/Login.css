@@ -592,6 +592,11 @@ ion-icon.md.hydrated:hover{
     width: 40px;
     border-radius: 50%;
 }
+.allItems{
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
 
 /* Responsive  */
 @media screen and (max-width:688px) {

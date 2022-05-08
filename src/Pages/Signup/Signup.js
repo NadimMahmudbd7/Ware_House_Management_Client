@@ -17,6 +17,7 @@ const Signup = () => {
     const [signInWithGoogle, googleUser] = useSignInWithGoogle(auth);
     const [userInfo, setUserInfo] = useState({ email: '', password: '', confirmpass: '' })
     const [error, setError] = useState({ email: '', password: '' })
+    
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
     
@@ -28,6 +29,8 @@ const Signup = () => {
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const [activeUser] = useAuthState(auth)
+
+    
 
     const forEmail = (event) => {
         const invalidEmail = event.target.value;
